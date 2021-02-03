@@ -1,0 +1,66 @@
+$primary-color: #2F80ED;
+$secondary-color: #E0E0E0;
+
+.steps, .step-point{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.step-header{
+  margin-top: auto;
+}
+
+.step{
+  flex: 1;
+  margin-top: auto;
+  &:first-child{
+    .pre-line{
+      visibility: hidden;
+    }
+  };
+  &:last-child{
+    .post-line{
+      visibility: hidden;
+    }
+  }
+}
+
+.point{
+  min-width: 36px;
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  background-color: $secondary-color;
+  border: 2px solid transparent;
+}
+
+.pre-line, .post-line{
+  height: 2px;
+  width: 100%;
+  background: $secondary-color;
+  margin-top: 18px;
+}
+
+.active{
+  .point{
+    border: 2px solid $primary-color;
+  }
+  .pre-line{
+    background: $primary-color;
+  }
+}
+
+.done{
+  .point{
+    background-color: $primary-color;
+  }
+  .pre-line, .post-line{
+    background: $primary-color;
+  }
+}
+
+.inactive{
+
+}
+
