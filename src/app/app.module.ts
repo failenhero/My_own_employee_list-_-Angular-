@@ -9,6 +9,7 @@ import { FormProfileComponent } from './form/form-profile/form-profile.component
 import { FormCheckedComponent } from './form/form-checked/form-checked.component';
 import { FormFinishedComponent } from './form/form-finished/form-finished.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { StepService } from './shared/services/step.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    StepService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

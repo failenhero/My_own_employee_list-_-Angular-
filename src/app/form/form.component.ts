@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { StepStateService } from '../shared/step-state.service';
+import { StepService } from '../shared/services/step.service';
 
 @Component({
   selector: 'app-form',
@@ -9,14 +9,15 @@ import { StepStateService } from '../shared/step-state.service';
 export class FormComponent implements OnInit {
 
   constructor(
-    private stepStateService: StepStateService
+    private stepService: StepService
   ) { }
 
   ngOnInit(): void {
   }
 
   createNewForm(){
-    this.stepStateService.serviceStepState$.next(1)
+    this.stepService.serviceStepState$.next(2)
+    this.stepService.initSteps()
   }
 
 }
