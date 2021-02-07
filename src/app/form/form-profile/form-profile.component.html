@@ -1,1 +1,38 @@
-<p>form-profile works!</p>
+<form [formGroup]="empForm">
+
+  <mat-form-field appearance="outline" class="form-control">
+    <mat-label>Enter employee's name</mat-label>
+
+    <input matInput placeholder="Placeholder"
+      formControlName="empName">
+
+      <mat-hint>
+        This field is required
+      </mat-hint>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="form-control">
+    <mat-label>Enter date of joining</mat-label>
+
+    <input matInput type="date" placeholder="Enter date of joining"
+      formControlName="dateOfJoining">
+
+    <mat-hint>
+      This field is required
+    </mat-hint>
+  </mat-form-field>
+
+  <div class="buttons">
+    <button mat-raised-button color="primary"
+      (click)="backClick()">
+      back
+    </button>
+    <button mat-raised-button color="primary"
+      (click)="forwardClick()"
+      [disabled]='empForm.invalid'>
+      forward
+    </button>
+  </div>
+
+</form>
+

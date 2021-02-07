@@ -1,32 +1,32 @@
-<div class="steps">
+<div class="container">
 
-  <div class="step"
-    *ngFor="let step of steps"
-    [ngClass]="getClassName(step.Status)">
+  <div class="steps">
 
-    <div class="step-header" [innerHTML]="step.Header">
+    <div class="step"
+      *ngFor="let step of steps"
+      [ngClass]="getClassName(step.Status)">
 
-    </div>
-
-    <div class="step-point">
-
-      <div class="pre-line">
+      <div class="step-header" [innerHTML]="step.Header">
 
       </div>
 
-      <div class="point">
+      <div class="step-point">
+
+        <div class="pre-line">
+
+        </div>
+
+        <div class="point">
+
+        </div>
+
+        <div class="post-line">
+
+        </div>
 
       </div>
-
-      <div class="post-line">
-
-      </div>
-
     </div>
   </div>
 
 </div>
 
-<button (click)="start()">
-  Start!
-</button>

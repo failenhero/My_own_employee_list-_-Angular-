@@ -1,1 +1,27 @@
-<p>form-checked works!</p>
+<form [formGroup]="formDep">
+
+  <mat-form-field appearance="fill">
+    <mat-label>Choose department</mat-label>
+    <mat-select formControlName="department">
+      <mat-option
+        *ngFor="let dep of depList"
+        [value]="dep.DepartmentName">
+        {{dep.DepartmentName}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+<div class="buttons">
+    <button mat-raised-button color="primary"
+      (click)="backClick()">
+      back
+    </button>
+    <button mat-raised-button color="primary"
+      (click)="forwardClick()"
+      [disabled]="formDep.invalid">
+      forward
+    </button>
+  </div>
+
+</form>
+

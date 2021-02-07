@@ -1,1 +1,40 @@
-<p>form-finished works!</p>
+<div class="container">
+
+  <mat-card class="mat-card">
+
+    <mat-card-content>
+      <table>
+        <tr>
+          <td colspan="2"><h2>Check all employee's data:</h2></td>
+        </tr>
+        <tr>
+          <td class="td-names"><h4>Name:</h4></td>
+          <td><h4> {{this.currentName}} </h4></td>
+        </tr>
+        <tr>
+          <td class="td-names"><h4>Date of joining:</h4></td>
+          <td><h4> {{this.currentDate}} </h4></td>
+        </tr>
+        <tr>
+          <td class="td-names"><h4>Department:</h4></td>
+          <td><h4> {{this.currentDepartment}} </h4></td>
+        </tr>
+      </table>
+    </mat-card-content>
+
+    <mat-card-actions class="card-buttons">
+      <button
+        mat-raised-button color="primary"
+        (click)="backClick()">
+        Back
+      </button>
+      <button
+        mat-raised-button color="primary"
+        (click)="createNewEmployee()">
+        Create new employee
+      </button>
+    </mat-card-actions>
+  </mat-card>
+
+</div>
+

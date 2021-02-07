@@ -17,23 +17,23 @@ export class StepService {
     this.serviceStepState$.subscribe( (res) => {
       return this.stepState = res;
     })
-   }
+  }
 
   initSteps(){
     this.steps = [
       {
         Id: 1,
-        Header: 'Profile',
+        Header: 'Enter <br> data',
         Status: Status.Done
       },
       {
         Id: 2,
-        Header: 'Check <br> something',
+        Header: 'Enter <br> department',
         Status: Status.Active
       },
       {
         Id: 3,
-        Header: 'Finish',
+        Header: 'Create <br> employee',
         Status: Status.Inactive
       }
     ]

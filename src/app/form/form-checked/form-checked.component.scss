@@ -1,0 +1,21 @@
+form{
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 90%;
+}
+
+.form-control{
+  width: 500px;
+  max-width: 100%;
+
+}
+
+.buttons{
+  display: inline-flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 2rem;
+}

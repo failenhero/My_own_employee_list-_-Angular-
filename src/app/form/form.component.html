@@ -1,6 +1,20 @@
-<button
-  type="button"
-  [routerLink]="['/profile']"
-  (click)="createNewForm()">
-  Create new form
-</button>
+<div class="buttons-group">
+
+  <button
+    mat-raised-button
+    color="primary"
+    type="button"
+    [routerLink]="['/profile']"
+    (click)="createNewForm()">
+      Add new employee
+  </button>
+
+  <button
+    mat-raised-button
+    color="accent"
+    [routerLink]="['/employee']">
+      Show employee list
+  </button>
+
+</div>
+

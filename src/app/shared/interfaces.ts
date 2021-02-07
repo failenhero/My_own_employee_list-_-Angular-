@@ -9,3 +9,16 @@ export enum Status {
   Active,
   Done
 }
+
+export interface Employee {
+  EmployeeID?: number,
+  EmployeeName: string,
+  Department: string,
+  DateOfJoining: string,
+  PhotoFileName?: any
+}
+
+export interface Department {
+  DepartmentID?: number,
+  DepartmentName: string
+}

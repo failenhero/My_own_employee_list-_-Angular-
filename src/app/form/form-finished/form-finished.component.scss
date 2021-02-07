@@ -1,0 +1,26 @@
+.container{
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 500px;
+  max-width: 100%;
+}
+
+.card-buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+table{
+  padding: 2rem;
+}
+
+td{
+  text-align: left
+}
+
+.td-names{
+  text-align: right;
+  padding-right: 1rem;
+}

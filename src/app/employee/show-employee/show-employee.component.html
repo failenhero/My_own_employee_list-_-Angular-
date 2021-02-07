@@ -1,0 +1,52 @@
+<div class="wrapper">
+
+  <mat-form-field appearance="outline">
+    <input matInput
+      placeholder="type here to filter by name"
+      [(ngModel)]="employeeNameFilter">
+  </mat-form-field>
+
+  <table>
+    <thead>
+      <tr class="table-header">
+        <th>id</th>
+        <th>name</th>
+        <th>department</th>
+        <th>date of joining</th>
+        <th></th>
+      </tr>
+
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of employeeList |empFilterName:employeeNameFilter">
+        <td> {{emp.EmployeeID}} </td>
+        <td> {{emp.EmployeeName}} </td>
+        <td> {{emp.Department}} </td>
+        <td> {{emp.DateOfJoining}} </td>
+        <td>
+          <button
+            style="padding: 0%; margin-right: 1rem;"
+            mat-mini-fab color="primary"
+            (click)="openDialog(emp)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button
+            style="padding: 0%;"
+            mat-mini-fab color="primary"
+            (click)="deleteEmployee(emp.EmployeeID)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <button
+    class="btn-back"
+    mat-raised-button color="primary"
+    [routerLink]="['/']">
+      back to main
+  </button>
+
+</div>
